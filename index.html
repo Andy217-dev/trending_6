@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mighty Token - The Funniest Meme Token!</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rampart+One&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="icon" href="/images/image.jpg" type="image/x-icon" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe9a1, #ff6f61, #fdc830);
+            font-family: "Permanent Marker", cursive;
+            color: #221f10;
+            text-align: center;
+            margin: 0;
+            overflow-x: hidden;
+            animation: backgroundAnimation 12s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        header {
+            background: rgba(255, 165, 0, 0.9);
+            padding: 60px;
+            border-bottom: 5px solid #ffdc5c;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            animation: textBounce 1s infinite alternate;
+        }
+
+        @keyframes textBounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h2 {
+            font-family: "Rampart One", cursive;
+            font-size: 2.5rem;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #ffdc5c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px;
+            position: relative;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .meme-image {
+            width: 100%;
+            max-width: 500px; 
+            margin: 20px;
+            border: 10px dashed #ff6f61;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+            animation: imageShake 1s infinite alternate;
+        }
+
+        @keyframes imageShake {
+            0% {
+                transform: rotate(-4deg);
+            }
+            100% {
+                transform: rotate(4deg);
+            }
+        }
+
+        .humor-explanation {
+            font-size: 1.5rem;
+            margin: 20px;
+            background: rgba(255, 230, 0, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: pop 0.6s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            flex: 1;
+            min-width: 300px;
+            color: #333;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .tokenomics {
+            background: rgba(255, 245, 100, 0.7);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: scaleUp 1s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .tokenomics h3 {
+            color: #421c0b;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(24, 80, 64, 0.7);
+        }
+
+        .ca {
+            background-color: rgba(255, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .hot-buy {
+            background-color: #ffdc5c;
+            color: #221f10;
+            padding: 20px 45px;
+            border: none;
+            border-radius: 10px;
+            font-size: 2rem;
+            margin: 20px 0;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+            animation: spin 1s infinite alternate;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(10deg);
+            }
+        }
+
+        .hot-buy:hover {
+            background-color: #ffe39b;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: rgba(255, 230, 0, 0.8);
+            color: #221f10;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-button {
+            background-color: #ffdc5c;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            color: #221f10;
+            font-size: 1.5rem;
+            padding: 15px 25px;
+            margin: 10px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .social-button:hover {
+            background-color: #ffe39b;
+            transform: scale(1.1);
+        }
+
+        .flex-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .animate {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .eyecatcher {
+            font-size: 1.8rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            animation: blink 1.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .symbol {
+            font-size: 2rem; 
+            margin: 10px; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mighty Token on the Eth! 💰</h1>
+        <h2>Ticker: $Mighty 🚀</h2>
+    </header>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <img src="/images/image.jpg" class="meme-image" alt="Meme Example 2" />
+
+            <div class="humor-explanation">
+                <h3>🔥 Mighty Token 🔥</h3>
+                <p>
+                    Welcome to Mighty Token, the meme token that’s so awesome it’ll make your head spin! Here, laughter and profit are the names of the game! 
+                    Dive into a world where we take ridiculousness to new heights and turn your memes into gains! 
+                    Get ready for the wildest ride of your life, filled with crazy jokes and legendary memes that will slap you into happiness! 
+                    If you can meme it, we can dream it! Join us for laughter, chaos, and maybe some serious digital riches! 🤣🚀
+                </p>
+            </div>
+        </div>
+
+        <div class="ca">
+            <strong>CA:</strong> 0xComingSoon
+        </div>
+
+        <div>
+            <a
+              class="hot-buy"
+              href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0xComingSoon"
+            >
+              🔥 Buy Now! 🔥
+            </a>
+        </div>
+
+        <div class="tokenomics">
+            <h3>Tokenomics 💰</h3>
+            <p style="font-size: 1.8rem"><strong>Total Supply:</strong> 100,000,000 $Mighty</p>
+            <p style="font-size: 1.8rem"><strong>Tax:</strong> 0% Buy/Sell Tax</p>
+            <p style="font-size: 1.8rem"><strong>LP Burned:</strong> 100%</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="eyecatcher">
+            <h3>🔥 Join Community 🔥</h3>
+            <span class="symbol">🎉</span>
+            <span class="symbol">💻</span>
+            <span class="symbol">💸</span>
+        </div>
+        <div class="flex-buttons">
+            <a
+              class="social-button"
+              href="https://www.dextools.io/app/en/ether/pair-explorer/0xComingSoon"
+            >Dextools</a>
+            <a
+              class="social-button"
+              href="https://dexscreener.com/ethereum/0xComingSoon"
+            >Dexscreener</a>
+        </div>
+        <p style="font-size: 1.4rem; color: #333; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);">
+            💥 © 2025 Mighty Token! The wildest ride in crypto! Join or cry in the corner! 💥
+        </p>
+    </footer>
+
+    <script>
+        const elements = document.querySelectorAll(
+            ".humor-explanation, .tokenomics, .social-button, .hot-buy"
+        );
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        elements.forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
